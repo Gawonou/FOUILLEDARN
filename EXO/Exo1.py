@@ -9,6 +9,14 @@ class Data:
 		self.n = n
 		self.Lalist = Lalist
 
+def convertir_entier(A):
+	B = []
+	for a in A:
+		B.append(int(a))
+
+	return B
+
+
 
 
 print(sys.argv)
@@ -28,6 +36,41 @@ elif len(sys.argv) == 2:
 	for line in inputFile:
 		line =  line.replace("\n","")
 		line = line.replace("\r", "")
-		print(line)
+		a = line.split(",")
+		#print(a[0])
+		
+		H  = convertir_entier(a)
+		DiscriminantV2.DiscroV(H)
+
 else:
 	print("Tu dois donner le nom de fichier en argument")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
