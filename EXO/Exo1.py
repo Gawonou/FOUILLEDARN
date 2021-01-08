@@ -2,7 +2,7 @@ import sys
 import sys, os
 sys.path.append(os.path.abspath(os.path.join('..', '')))
 
-import DiscriminantV2
+import Discriminant
 
 class Data:
 	def __init__(self, n, Lalist):
@@ -11,10 +11,11 @@ class Data:
 
 def convertir_entier(A):
 	B = []
-	for a in A:
-		B.append(int(a))
-
+	for ac in A:
+		B.append(int(ac))
+		#print(len(B))
 	return B
+           
 
 
 
@@ -28,7 +29,10 @@ if len(sys.argv) == 1:
 	for line in inputFile:
 		line =  line.replace("\n","")
 		line = line.replace("\r", "")
-		print(line)
+		#print(line)
+		ab = line.split(",")	
+		Hb  = convertir_entier(ab)
+		Discriminant.Discro(Hb)
 
 elif len(sys.argv) == 2:
 	filename  = sys.argv[1]
@@ -37,10 +41,9 @@ elif len(sys.argv) == 2:
 		line =  line.replace("\n","")
 		line = line.replace("\r", "")
 		a = line.split(",")
-		#print(a[0])
-		
+		#print(a[0])	
 		H  = convertir_entier(a)
-		DiscriminantV2.DiscroV(H)
+		Discriminant.Discro(H)
 
 else:
 	print("Tu dois donner le nom de fichier en argument")
