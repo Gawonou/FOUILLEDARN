@@ -2,7 +2,7 @@ import sys
 import sys, os
 sys.path.append(os.path.abspath(os.path.join('..', '')))
 
-import DiscriminantV2
+iImport Discriminant
 
 class Data:
 	def __init__(self, n, Lalist):
