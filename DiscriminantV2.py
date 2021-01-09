@@ -1,4 +1,5 @@
 def discriminant(a, b, c): 
+
   
     discriminant = (b**2) - (4*a*c) 
     if discriminant > 0: 
@@ -25,6 +26,7 @@ def discriminant(a, b, c):
 
 
 def DiscroV(A):
+	
     if len(A) == 3:
         x = A[0]
         y = A[1]
