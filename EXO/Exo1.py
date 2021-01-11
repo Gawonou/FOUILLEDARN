@@ -9,15 +9,25 @@ class Data:
 		self.n = n
 		self.Lalist = Lalist
 
-def convertir_entier(A):
-        b = []
+def convertir_entier():
+	#b = []
 	B = []
-        try :
-            lin = A.split(",")
-        expect
-	for ac in A:
-		B.append(int(ac))
-		#print(len(B))
+	filename = input("Entre le nom du fichier a lire: ") 
+	inputFile = open(filename, "r")
+	for line in inputFile:
+		b = []
+		line =  line.replace("\n","")
+		line = line.replace("\r", "")
+		try :
+			lines = line.split(",")
+			#print(lines)
+			for ac in lines:
+				b.append(int(ac))
+			#print(b)
+			B.append(b)
+		except:
+			print("probleme")
+			exit(0)
 	return B
            
 
@@ -27,16 +37,18 @@ def convertir_entier(A):
 print(sys.argv)
 
 if len(sys.argv) == 1:
-
+	"""
 	filename = input("Entre le nom du fichier a lire: ") 
 	inputFile = open(filename, "r")
 	for line in inputFile:
 		line =  line.replace("\n","")
 		line = line.replace("\r", "")
 		#print(line)
-		ab = line.split(",")	
-		Hb  = convertir_entier(ab)
-		Discriminant.Discro(Hb)
+		ab = line.split(",")"""	
+	Hb  = convertir_entier()
+	#print(Hb)
+	for hb in Hb:
+		Discriminant.Discro(hb)
 
 elif len(sys.argv) == 2:
 	filename  = sys.argv[1]

@@ -26,31 +26,32 @@ def Discro(A):
         x = A[0]
         y = A[1]
         z = A[2]
-        d = equationroots(x, y, z)
-        return d
+        equationroots(x, y, z)
+        #return d
     elif len(A) == 6:
         B = A[:len(A)//2]
-        print(B)
+        #print(B)
         x = B[0]
         y = B[1]
         z = B[2]
-        d1 = equationroots(x, y, z)
+        equationroots(x, y, z)
         
         C = A[len(A)//2:]
         print(C)
         x = C[0]
         y = C[1]
         z = C[2]
-        d2 = equationroots(x, y, z)
+        equationroots(x, y, z)
         
-        return d1, d2
+        #return d1, d2
         
     else:
         print("Erreur, Pas de calcul de discriminant")
 
-
-SK = [1, -5, 6, 1, 2, 1]
-Discro(SK)
+if __name__ == '__main__':
+    #main()
+    SK = [1, -5, 6, 1, 2, 1]
+    Discro(SK)
 
 
 
