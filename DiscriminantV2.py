@@ -29,8 +29,8 @@ def DiscroV(A):
         x = A[0]
         y = A[1]
         z = A[2]
-        d = discriminant(x, y, z)
-        return d
+        discriminant(x, y, z)
+        
     elif len(A) == 6:
         B = A[:len(A)//2]
         print(B)
@@ -51,5 +51,5 @@ def DiscroV(A):
         print("Erreur, Pas de calcul de discriminant")
 
 
-KT = [1, 4, 3]
+KT = [1, 5, 4]
 DiscroV(KT)
