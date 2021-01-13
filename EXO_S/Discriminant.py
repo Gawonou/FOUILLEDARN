@@ -10,7 +10,7 @@ def equationroots( a, b, c):
       
     # checking condition for discriminant 
     if dis > 0:     
-        print("x1 = ", (-b + sqrt_val)/(2 * a), ", x2 = ",(-b - sqrt_val)/(2 * a))  
+        print("x1 = ", (-b - sqrt_val)/(2 * a), ", x2 = ",(-b + sqrt_val)/(2 * a))  
           
     elif dis == 0:    
         print("x = ",-b / (2 * a))  
@@ -20,12 +20,31 @@ def equationroots( a, b, c):
         print("NaN")   
     
 
+def equationrootsf( a, b, c,f):  
+  
+    # calculating discriminant using formula 
+    dis = b * b - 4 * a * c  
+    sqrt_val = math.sqrt(abs(dis))  
+      
+    # checking condition for discriminant 
+    if dis > 0:     
+        f.write("x1 = ", (-b - sqrt_val)/(2 * a), ", x2 = ",(-b + sqrt_val)/(2 * a))  
+          
+    elif dis == 0:    
+        f.write("x = ",-b / (2 * a))  
+      
+    # when discriminant is less than 0 
+    else: 
+        f.write("NaN") 
 
-def Discro(A):
+
+def Discro(A, k):
     if len(A) == 3:
         x = A[0]
         y = A[1]
         z = A[2]
+
+        
         equationroots(x, y, z)
         #return d
     elif len(A) == 6:
